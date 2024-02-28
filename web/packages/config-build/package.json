@@ -1,0 +1,6 @@
+{
+  "name": "@packages/config-build",
+  "version": "1.0.0",
+  "description": "TS WEBPACK",
+  "main": "./build/index.ts"
+}

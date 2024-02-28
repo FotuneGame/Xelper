@@ -1,0 +1,1 @@
+export {MessengerLazy as Messenger} from './Messenger.lazy';

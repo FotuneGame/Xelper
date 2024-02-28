@@ -1,0 +1,1 @@
+export {EventLazy as Event} from './Event.lazy';

@@ -1,0 +1,53 @@
+{
+  "name": "MFE",
+  "version": "0.0.1",
+  "description": "MFE for web",
+  "scripts": {
+    "start:main": "concurrently \"cd services/about && npm run start:close \" \" cd services/event && npm run start:close \" \" cd services/messenger && npm run start:close \" \" cd services/shorts && npm run start:close \" \" cd services/user && npm run start:close \" \" cd services/host && npm run start \" ",
+    "start": "concurrently \"cd services/about && npm run start \" \" cd services/event && npm run start \" \" cd services/messenger && npm run start \" \" cd services/shorts && npm run start \" \" cd services/user && npm run start \" \" cd services/host && npm run start \" ",
+    "build:dev": "concurrently \"cd services/about && npm run build:dev \" \" cd services/event && npm run build:dev \" \" cd services/messenger && npm run build:dev \" \" cd services/shorts && npm run build:dev \" \" cd services/user && npm run build:dev \" \" cd services/host && npm run build:dev \" ",
+    "build:relize": "concurrently \"cd services/about && npm run build:relize \" \" cd services/event && npm run build:relize \" \" cd services/messenger && npm run build:relize \" \" cd services/shorts && npm run build:relize \" \" cd services/user && npm run build:relize \" \" cd services/host && npm run build:relize \" ",
+    "build:relize:analyzer": "concurrently \"cd services/about && npm run build:relize:analyzer \" \" cd services/event && npm run build:relize:analyzer \" \" cd services/messenger && npm run build:relize:analyzer \" \" cd services/shorts && npm run build:relize:analyzer \" \" cd services/user && npm run build:relize:analyzer \" \" cd services/host && npm run build:relize:analyzer \" ",
+    "build:mobile": "concurrently \"cd services/about && npm run build:mobile \" \" cd services/event && npm run build:mobile \" \" cd services/messenger && npm run build:mobile \" \" cd services/shorts && npm run build:mobile \" \" cd services/user && npm run build:mobile \" \" cd services/host && npm run build:mobile \" ",
+    "build:desktop": "concurrently \"cd services/about && npm run build:desktop \" \" cd services/event && npm run build:desktop \" \" cd services/messenger && npm run build:desktop \" \" cd services/shorts && npm run build:desktop \" \" cd services/user && npm run build:desktop \" \" cd services/host && npm run build:desktop \" "
+  },
+  "author": "VoenDev",
+  "license": "ISC",
+  "dependencies": {
+    "@packages/shared": "*",
+    "concurrently": "^8.2.2",
+    "webpack": "^5.90.3",
+    "webpack-dev-server": "^5.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@svgr/webpack": "^8.1.0",
+    "@types/babel__core": "^7.20.5",
+    "@types/fork-ts-checker-webpack-plugin": "^0.4.5",
+    "@types/node": "^20.11.20",
+    "@types/webpack": "^5.28.5",
+    "@types/webpack-bundle-analyzer": "^4.7.0",
+    "@types/webpack-dev-server": "^4.7.2",
+    "babel-loader": "^9.1.3",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^6.10.0",
+    "fork-ts-checker-webpack-plugin": "^9.0.2",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.8.0",
+    "sass": "^1.71.1",
+    "sass-loader": "^14.1.1",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "webpack-bundle-analyzer": "^4.10.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ]
+}
