@@ -2,8 +2,8 @@
   "name": "host",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack serve --env mode=development",
-    "start:close": "webpack serve --env mode=development --env open_web=false",
+    "start": "webpack serve --env mode=development --open",
+    "start:close": "webpack serve --env mode=development",
     "build:dev": "webpack --env mode=development",
     "build:relize": "webpack --env mode=production",
     "build:relize:analyzer": "webpack --env mode=production --env analyzer=true",

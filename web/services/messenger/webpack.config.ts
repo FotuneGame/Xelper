@@ -10,7 +10,6 @@ interface  EnvVariables {
     mode:BuildMode,
     port: number,
     platform:BuildPlatform,
-    open_web: boolean,
 }
 
 export default (env: EnvVariables) => {
@@ -29,7 +28,6 @@ export default (env: EnvVariables) => {
         },
         analyzer: env.analyzer ?? false,
         platform: env.platform ?? "desktop",
-        open_web: env.open_web  ?? true,
     });
 
     config.plugins.push(ModuleFederation);

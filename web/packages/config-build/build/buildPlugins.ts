@@ -31,7 +31,7 @@ export function buildPlugins(options:BuildOptions):Configuration['plugins']{
 
     if(isDev){
         plugins.push(new webpack.ProgressPlugin());
-        //plugins.push(new ForkTsCheckerWebpackPlugin()); // плагин проверки ts ошибок)
+        //plugins.push(new ForkTsCheckerWebpackPlugin()); // плагин проверки ts ошибок ()
     }else{
         plugins.push(new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',

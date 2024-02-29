@@ -14,7 +14,6 @@ export interface BuildOptions{
     analyzer?:boolean,
     platform?:BuildPlatform,
     remotes?:BuildRemotes,
-    open_web?:boolean,
 }
 
 export type BuildMode = 'production' | 'development';
