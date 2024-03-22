@@ -3,3 +3,6 @@ cd web
 npm i
 (возможно но вряд ли npm i в сервисах)
 npm run start
+
+Внимание:
+- Bootstrap подключен как link во всех html микрофронтов(((
