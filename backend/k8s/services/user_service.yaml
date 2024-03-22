@@ -1,0 +1,12 @@
+kind: Service
+metadata:
+  name: user_service
+  labels:
+    app: user_service
+spec:
+  selector:
+    app: user
+  ports:
+    - protocol: TCP
+      port: 81
+      targetPort: 81

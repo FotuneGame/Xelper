@@ -1,0 +1,1 @@
+export {AuthLazy as Auth} from './Auth.lazy';

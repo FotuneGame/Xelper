@@ -1,0 +1,12 @@
+kind: Service
+metadata:
+  name: shorts_service
+  labels:
+    app: shorts_service
+spec:
+  selector:
+    app: shorts
+  ports:
+    - protocol: TCP
+      port: 83
+      targetPort: 83

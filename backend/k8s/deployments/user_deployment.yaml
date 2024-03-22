@@ -1,0 +1,17 @@
+apiVersion: apps/user
+kind: Deployment
+metadata:
+  name: user_deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: user
+    spec:
+      containers:
+        - name: user_container
+          image: ../../services/user/ #ссылка на контейнер в docker hub
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 81

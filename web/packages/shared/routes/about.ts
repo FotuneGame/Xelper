@@ -1,3 +1,3 @@
 export const aboutRoutes={
-    base:"/about"
+    main:"/about"
 }

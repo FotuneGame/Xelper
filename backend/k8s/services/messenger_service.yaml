@@ -1,0 +1,12 @@
+kind: Service
+metadata:
+  name: messenger_service
+  labels:
+    app: messenger_service
+spec:
+  selector:
+    app: messenger
+  ports:
+    - protocol: TCP
+      port: 82
+      targetPort: 82

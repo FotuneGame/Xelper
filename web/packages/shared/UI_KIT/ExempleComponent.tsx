@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Button from 'react-bootstrap/Button';
+
 const ExempleComponent = () => {
     return (
         <div>
-            <h1>Пример компонент из UI_KIT</h1>
+            <Button variant="primary">Пример компонент из UI_KIT</Button>
         </div>
     );
 };

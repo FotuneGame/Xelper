@@ -1,9 +1,14 @@
 import React from 'react';
 import {createBrowserRouter} from "react-router-dom";
-import {Routes} from "@packages/shared/routes/index";
-import {App} from "@/components/App";
-import {User} from "@/page/components/user";
+import {Routes} from "@packages/shared/routes";
 import ErrorCard from "@packages/shared/UI_KIT/ErrorCard/ErrorCard";
+import {App} from "@/components/App";
+import {Account} from "@/page/components/account";
+import {Registration} from "@/page/components/registration";
+import {Auth} from "@/page/components/auth";
+import {Forget} from "@/page/components/forget";
+import {Create} from "@/page/components/create";
+import {Code} from "@/page/components/code";
 
 const routes = [
     {
@@ -11,12 +16,28 @@ const routes = [
         element: <App/>,
         children: [
             {
-                path: "/",
-                element: <User/>
+                path: Routes.userRoutes.account + "/:id",
+                element: <Account/>
             },
             {
-                path: Routes.userRoutes.base,
-                element: <User/>
+                path: Routes.userRoutes.registration,
+                element: <Registration/>
+            },
+            {
+                path: Routes.userRoutes.authorization,
+                element: <Auth/>
+            },
+            {
+                path: Routes.userRoutes.forget,
+                element: <Forget/>
+            },
+            {
+                path: Routes.userRoutes.create,
+                element: <Create/>
+            },
+            {
+                path: Routes.userRoutes.code,
+                element: <Code/>
             },
         ],
         errorElement:<ErrorCard/>

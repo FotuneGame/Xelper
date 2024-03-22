@@ -1,0 +1,59 @@
+apiVersion: ingress
+kind: Ingress
+metadata:
+  name: ingress
+spec:
+  ingressClassName: ingress
+  rules:
+    # подгружем tls сертификат
+    #- tls:
+    #    - hosts:
+    #        - localhost
+    #      secretName: tls-certificate
+    - host: localhost
+    - http:
+        paths:
+          - path: /api/user
+            pathType: Prefix
+            backend:
+              service:
+                name: user_service
+                port:
+                  number: 81
+    - http:
+        paths:
+          - path: /api/messenger
+            pathType: Prefix
+            backend:
+              service:
+                name: messenger_service
+                port:
+                  number: 82
+    - http:
+        paths:
+          - path: /api/shorts
+            pathType: Prefix
+            backend:
+              service:
+                name: shorts_service
+                port:
+                  number: 83
+    - http:
+        paths:
+          - path: /api/event
+            pathType: Prefix
+            backend:
+              service:
+                name: event_service
+                port:
+                  number: 84
+    # Указывать ли в прокси адрес для работы с бд
+    #- http:
+    #    paths:
+    #      - path: /api/mongo
+    #        pathType: Prefix
+    #        backend:
+    #          service:
+    #            name: mongo_service
+    #            port:
+    #             number: 180

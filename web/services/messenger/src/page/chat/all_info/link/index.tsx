@@ -1,0 +1,1 @@
+export {LinkChatLazy as LinkChat} from './LinkChat.lazy';

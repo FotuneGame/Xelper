@@ -1,6 +1,6 @@
 import React from 'react';
 import {createBrowserRouter} from "react-router-dom";
-import {Routes} from "@packages/shared/routes/index";
+import {Routes} from "@packages/shared/routes";
 import {App} from "@/components/App";
 import {About} from "@/page/components/about";
 import ErrorCard from "@packages/shared/UI_KIT/ErrorCard/ErrorCard";
@@ -11,11 +11,7 @@ const routes = [
         element: <App/>,
         children: [
             {
-                path: "/",
-                element: <About/>
-            },
-            {
-                path: Routes.aboutRoutes.base,
+                path: Routes.aboutRoutes.main,
                 element: <About/>
             },
         ],

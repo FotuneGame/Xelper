@@ -1,0 +1,1 @@
+export {AddFriendLazy as AddFriend} from './AddFriend.lazy';

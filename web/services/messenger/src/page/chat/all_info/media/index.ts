@@ -1,0 +1,1 @@
+export {MediaLazy as Media} from './Media.lazy';

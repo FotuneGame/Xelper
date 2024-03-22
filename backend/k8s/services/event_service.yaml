@@ -1,0 +1,12 @@
+kind: Service
+metadata:
+  name: event_service
+  labels:
+    app: event_service
+spec:
+  selector:
+    app: event
+  ports:
+    - protocol: TCP
+      port: 84
+      targetPort: 84

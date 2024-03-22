@@ -1,0 +1,1 @@
+export {ChatLazy as Chat} from './Chat.lazy';

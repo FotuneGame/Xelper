@@ -8,6 +8,11 @@ export function buildDevServer(options:BuildOptions) : DevServerConfiguration{
         //если раздовать статику через nginx то надо делать проксирование
         historyApiFallback:true,
         hot:true,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+            "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+        }
     }
 
 

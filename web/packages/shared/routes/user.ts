@@ -1,3 +1,8 @@
 export const userRoutes={
-    base:"/user"
+    account:"/account",
+    registration:"/registration",
+    authorization:"/authorization",
+    forget:"/forget",
+    create:"/create",
+    code:"/code",
 }

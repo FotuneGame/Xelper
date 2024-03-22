@@ -1,3 +1,9 @@
 export const eventRoutes={
-    base:"/event"
+    main:"/events",
+    event:"/event",
+    studio:{
+        all:"/events/studio/all",
+        create:"/events/studio/create",
+        refactor:"/events/studio/refactor",
+    }
 }

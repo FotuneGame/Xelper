@@ -35,7 +35,7 @@ export function buildLoaders(options:BuildOptions):ModuleOptions['rules']{
     }
 
     const CssAndScssLoader ={
-            test: /\.s[ac]ss$/i,
+            test: /\.(s[ac]ss|css)$/i,
             use: [
                 // Creates `style` nodes from JS strings
                 isDev ? 'style-loader' : MiniCssExtractPlugin.loader,

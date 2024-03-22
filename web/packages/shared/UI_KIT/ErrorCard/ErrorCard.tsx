@@ -1,4 +1,5 @@
 import React from 'react';
+import "./ErrorCard.module.scss";
 
 const ErrorCard = () => {
     return (

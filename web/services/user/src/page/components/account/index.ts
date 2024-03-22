@@ -1,0 +1,1 @@
+export {AccountLazy as Account} from './Acount.lazy';
