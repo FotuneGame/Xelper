@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\web",
+    "\\web\\packages",
+    "\\web\\packages\\shared",
+    "\\web\\packages\\shared\\UI_KIT",
+    "\\web\\packages\\shared\\UI_KIT\\ErrorCard",
+    "\\web\\services",
+    "\\web\\services\\about",
+    "\\web\\services\\about\\src",
+    "\\web\\services\\about\\src\\page",
+    "\\web\\services\\about\\src\\page\\components"
+  ],
+  "SelectedNode": "\\web\\services\\about\\src\\page\\components\\about\\About.tsx",
+  "PreviewInSolutionExplorer": false
+}

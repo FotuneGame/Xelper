@@ -1,13 +1,21 @@
 import React, {useState} from 'react';
 import "./About.module.scss";
-
+import CardChat from "@packages/shared/UI_KIT/Cards/Chat/CardChat"
+import CardEvent from "@packages/shared/UI_KIT/Cards/Event/CardEvent"
+import CustomEventModal from '@packages/shared/UI_KIT/Button/Button';
+import CardUser from '@packages/shared/UI_KIT/Cards/User/CardUser';
+import MyCarousel from '@packages/shared/UI_KIT/Carousel/Carousel';
+import ErrorCard from '@packages/shared/UI_KIT/ErrorCard/ErrorCard';
 //для примера
 import {ExempleUtils} from "@packages/shared/utils/ExempleUtils";
 import ExempleComponent from "@packages/shared/UI_KIT/ExempleComponent";
+
 //пример загрузки статики
 import foto1JPG from "../../../assets/1.jpg";
 import foto2PNG from "../../../assets/2.png";
 import Foto3SVG from "../../../assets/3.svg";
+import { Modal } from 'react-bootstrap';
+
 
 const About = () => {
     ExempleUtils();
@@ -31,8 +39,14 @@ const About = () => {
                 <Foto3SVG width={200} height={200}/>
             </div>
             <h1>Платформа на текущий момент для HOST (задана env):{__PLATFORM__} , {__DEV__}</h1>
-            <ExempleComponent/>
-
+            <ExempleComponent />
+            <CardEvent></CardEvent>
+            <CardChat></CardChat>
+            <CustomEventModal show={undefined} handleClose={undefined}></CustomEventModal>
+            <CardUser name={''} phoneNumber={''} email={''}></CardUser>
+            <MyCarousel></MyCarousel>
+            <ErrorCard></ErrorCard>
+            <Modal></Modal>
         </div>
     );
 };

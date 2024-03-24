@@ -1,12 +1,27 @@
 import React from 'react';
-import "./Modal.module.scss";
+import { Modal, Button } from 'react-bootstrap';
 
-const Modal = () => {
+interface ModalProps {
+    show: boolean;
+    onHide: () => void; // Явно указываем тип для onHide
+    title: string;
+    body: string | React.ReactNode; // Мы также можем принимать React-элементы в качестве содержимого
+}
+
+const MyModal: React.FC<ModalProps> = ({ show, onHide, title, body }) => {
     return (
-        <div>
-           Модальное окно
-        </div>
+        <Modal show={show} onHide={onHide}>
+            <Modal.Header closeButton>
+                <Modal.Title>{title}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>{body}</Modal.Body>
+            <Modal.Footer>
+                <Button variant="secondary" onClick={onHide}>
+                    Закрыть
+                </Button>
+            </Modal.Footer>
+        </Modal>
     );
 };
 
-export default Modal;
+export default MyModal;
