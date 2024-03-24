@@ -57,6 +57,10 @@ export function buildLoaders(options:BuildOptions):ModuleOptions['rules']{
             ],
             exclude: /node_modules/,
         };
+    const MP4Loader={
+        test: /\.mp4$/,
+        use: 'file-loader?name=videos/[name].[ext]',
+    }
 
     //const BabelJSLoader = buildBabelLoader(options);
 
@@ -67,6 +71,7 @@ export function buildLoaders(options:BuildOptions):ModuleOptions['rules']{
         TypeScriptLoader,
         //BabelJSLoader,
         SvgrLoader,
+        MP4Loader,
     ]
 
 }

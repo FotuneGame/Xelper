@@ -1,6 +1,5 @@
 import React from 'react';
 import "./CardEvent.module.scss";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CardEvent = () => {
     return (

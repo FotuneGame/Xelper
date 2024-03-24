@@ -3,7 +3,7 @@ import {createRoot} from "react-dom/client";
 import { RouterProvider} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {router} from "@/router/Router";
-import Loading from "@packages/shared/UI_KIT/Loading/Loading";
+import Loading from "@packages/shared/UI_KIT/Loading";
 
 
 const root = document.getElementById('root')
@@ -16,7 +16,7 @@ const container = createRoot(root)
 
 
 container.render(
-    <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading fullscreen={true}/>}>
         <RouterProvider router={router}/>
     </Suspense>
 )

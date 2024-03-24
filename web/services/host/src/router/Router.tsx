@@ -1,7 +1,7 @@
 import React from "react";
 import {createBrowserRouter} from "react-router-dom";
 import {App} from "@/components/App";
-import ErrorCard from "@packages/shared/UI_KIT/ErrorCard/ErrorCard";
+import ErrorCard from "@packages/shared/UI_KIT/ErrorCard";
 
 //@ts-ignore
 import aboutRoutes from 'about/Router';
