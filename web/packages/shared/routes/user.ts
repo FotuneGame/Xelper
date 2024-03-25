@@ -3,6 +3,5 @@ export const userRoutes={
     registration:"/registration",
     authorization:"/authorization",
     forget:"/forget",
-    create:"/create",
     code:"/code",
 }

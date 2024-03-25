@@ -7,7 +7,6 @@ import {Account} from "@/page/components/account";
 import {Registration} from "@/page/components/registration";
 import {Auth} from "@/page/components/auth";
 import {Forget} from "@/page/components/forget";
-import {Create} from "@/page/components/create";
 import {Code} from "@/page/components/code";
 
 const routes = [
@@ -30,10 +29,6 @@ const routes = [
             {
                 path: Routes.userRoutes.forget,
                 element: <Forget/>
-            },
-            {
-                path: Routes.userRoutes.create,
-                element: <Create/>
             },
             {
                 path: Routes.userRoutes.code,
