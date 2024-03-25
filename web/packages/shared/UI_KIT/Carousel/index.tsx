@@ -22,7 +22,9 @@ const CarouselUI: React.FC<IProps> = ({imgs,video,poster}) => {
                     ? imgs.map((path,index) =>
                         <Carousel.Item key={path+index}>
                             {modalVisible ?
-                                <Wrapper setModalVisible={setModalVisible}><img className={style.item_full} src={path} /></Wrapper>
+                                <Wrapper setModalVisible={setModalVisible} AllControls={true}>
+                                    <img className={style.item_full} src={path} />
+                                </Wrapper>
                                 :
                                 <img className={style.item} src={path} onClick={() => setModalVisible(true)}/>
                             }
@@ -32,9 +34,17 @@ const CarouselUI: React.FC<IProps> = ({imgs,video,poster}) => {
                     ? video.map((path,index) =>
                         <Carousel.Item key={path+index}>
                             <div className={"d-flex justify-content-center"}>
-                                <div className={"w-75 align-self-center"}>
-                                    <Video className={"w-100"} video={path} poster={index < poster.length ? poster[index] : undefined} />
-                                </div>
+                                    {modalVisible ?
+                                        <div className={"w-50 align-self-center"}>
+                                            <Wrapper setModalVisible={setModalVisible} AllControls={false}>
+                                                <Video className={style.item_full} video={path} poster={index < poster.length ? poster[index] : undefined} />
+                                            </Wrapper>
+                                        </div>
+                                        :
+                                        <div className={"w-75 align-self-center"}>
+                                            <Video className={style.item} video={path} poster={index < poster.length ? poster[index] : undefined} />
+                                        </div>
+                                    }
                             </div>
                         </Carousel.Item>)
                     :null}
