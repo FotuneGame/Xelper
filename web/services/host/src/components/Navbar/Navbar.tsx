@@ -21,6 +21,9 @@ const Navbar = () => {
                         <NavLink className="mx-auto mx-lg-2 my-lg-auto my-2 text-decoration-none text-black" to={Routes.aboutRoutes.main}> О нас</NavLink>
                     </Nav>
                     <div className="my-2 d-grid d-lg-flex justify-content-center justify-content-lg-end">
+                        <NavLink className="mx-auto mx-lg-1 my-lg-auto my-2 text-decoration-none text-black" to={Routes.userRoutes.account+"/"+1}>
+                            <p className={"mx-auto mx-lg-2 my-lg-auto my-2 text-decoration-none text-black"}>Логин</p>
+                        </NavLink>
                         <NavLink className="mx-auto mx-lg-2 my-lg-auto my-2 text-decoration-none text-black" to={Routes.userRoutes.account+"/"+1}>
                             <img src={Ava} alt="Avatar" className={["rounded-circle", style.avatar].join(" ")}/>
                         </NavLink>
@@ -36,6 +39,7 @@ const Navbar = () => {
                 <div className="w-100 d-grid justify-content-center d-lg-flex justify-content-lg-between align-content-center">
                     <Nav>
                         <NavLink className="mx-auto mx-lg-2 my-lg-auto my-2 text-decoration-none text-black" to={Routes.eventRoutes.main}>Мероприятия</NavLink>
+                        <NavLink className="mx-auto mx-lg-2 my-lg-auto my-2 text-decoration-none text-black" to={Routes.shortsRoutes.main}>Шортсы</NavLink>
                         <NavLink className="mx-auto mx-lg-2 my-lg-auto my-2 text-decoration-none text-black" to={Routes.aboutRoutes.main}> О нас</NavLink>
                     </Nav>
                     <div className="my-2 d-flex justify-content-center justify-content-lg-end">
