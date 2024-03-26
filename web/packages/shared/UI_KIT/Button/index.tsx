@@ -6,11 +6,12 @@ interface IProps {
     variant:string,
     callback: () => void,
     children: string | React.ReactNode,
+    className: string,
 }
 
-const ButtonUI: React.FC<IProps> = ({variant,callback,children}) => {
+const ButtonUI: React.FC<IProps> = ({variant,callback,children,className}) => {
     return (
-        <Button variant={variant} onClick={callback}>
+        <Button className={className} variant={variant} onClick={callback}>
             {children}
         </Button>
     );

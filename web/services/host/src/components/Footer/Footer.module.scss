@@ -1,8 +1,41 @@
 footer{
-  height: 20px;
+  height: 100px;
   width: 100%;
   position: absolute;
   bottom: 0;
+}
 
-  background: #FFAA73;
+.up_back{
+  background: #3b3b3b;
+  height: 60%;
+}
+
+.down_back{
+  background: #2d2d2d;
+  height: 40%;
+}
+
+
+@media only screen and (max-width: 	1320px){
+  footer{
+    height: 100px;
+  }
+  .up_back{
+    height: 60%;
+  }
+  .down_back{
+    height: 40%;
+  }
+}
+
+@media only screen and  (max-width: 767px){
+  footer{
+    height: 400px;
+  }
+  .up_back{
+    height: 75%;
+  }
+  .down_back{
+    height: 25%;
+  }
 }
