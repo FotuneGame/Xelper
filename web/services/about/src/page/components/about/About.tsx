@@ -83,7 +83,7 @@ const About = () => {
             {//<!-- Пример слайдера с фотографиями-->
             }
             <div className={"d-flex justify-content-center"}>
-                <CarouselUI imgs={[foto1JPG,foto2PNG]}/>
+                <CarouselUI imgs={[foto1JPG,foto2PNG]} controls={true}/>
             </div>
 
             <hr/>
@@ -125,7 +125,7 @@ const About = () => {
             {//<!-- Пример слайдера с видео-->
             }
             <div className={"d-flex justify-content-center"}>
-                <CarouselUI video={[MP4,MP4]} poster={[foto1JPG]}/>
+                <CarouselUI video={[MP4,MP4]} poster={[foto1JPG]} controls={true}/>
             </div>
 
 
@@ -134,7 +134,7 @@ const About = () => {
             {//<!-- Пример слайдера универсального (Лучше два слайдера с фото и видео отдельно!!!)-->
             }
             <div className={"d-flex justify-content-center"}>
-                <CarouselUI imgs={[foto1JPG,foto2PNG]} video={[MP4,MP4]} poster={[foto1JPG]}/>
+                <CarouselUI imgs={[foto1JPG,foto2PNG]} video={[MP4,MP4]} poster={[foto1JPG]} controls={true}/>
             </div>
 
 

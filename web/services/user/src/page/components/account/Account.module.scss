@@ -1,0 +1,25 @@
+.ava{
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+.img{
+  position: relative;
+  top:-50%;
+  left: -50%;
+}
+
+@media only screen and (max-width: 	1320px){
+  .ava{
+    width: 300px;
+    height: 300px;
+  }
+}
+
+
+@media only screen and  (max-width: 767px){
+  .ava{
+    width: 100px;
+    height: 100px;
+  }
+}

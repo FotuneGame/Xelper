@@ -1,15 +1,30 @@
-import {React,useState} from 'react';
+import {React,useState,useEffect} from 'react';
 import style from "./Navbar.module.scss";
 import {NavLink} from "react-router-dom";
 import {Navbar as NavbarB, Container, Offcanvas} from "react-bootstrap";
 import ContentNavbar from './ContentNavbar';
-import {FaBars} from "react-icons/fa"
+import {FaBars,FaTimes} from "react-icons/fa"
+import ButtonUI from "@packages/shared/UI_KIT/Button";
 
 
 
 const Navbar = () => {
-    const [auth,setAuth] = useState<boolean>(false);
 
+    const [show, setShow] = useState(false);
+    const switchOffCanvas = () => show ? setShow(false) : setShow(true);
+
+    const [auth,setAuth] = useState<boolean>(false);
+    useEffect(()=>{
+        if(localStorage.getItem("auth") || sessionStorage.getItem("auth"))setAuth(true);
+        else exit();
+    },[localStorage.getItem("auth"),sessionStorage.getItem("auth") ]);
+
+    const exit = () =>{
+        localStorage.clear();
+        sessionStorage.clear();
+        setAuth(false);
+
+    }
 
     return (
         <NavbarB collapseOnSelect expand={false} className={["bg-white shadow fixed-top z-3",style.navbar].join(" ")}>
@@ -17,17 +32,20 @@ const Navbar = () => {
                 <NavbarB.Brand >
                     <NavLink className="text-decoration-none text-black" to={"/"}>Xelper</NavLink>
                 </NavbarB.Brand>
-                <NavbarB.Toggle className={"border-0 d-flex align-content-center"} aria-controls="offcanvasNavbar-expand" >
-                    <FaBars size={"1rem"}/>
-                </NavbarB.Toggle>
-                <NavbarB.Offcanvas id={`offcanvasNavbar-expand`} aria-labelledby={`offcanvasNavbarLabel-expand`} placement="end">
-                    <Offcanvas.Header closeButton>
-                        <Offcanvas.Title id={`offcanvasNavbarLabel-expand`}>
+                <ButtonUI className={"border-0 d-flex align-content-center"} variant={"link"}  callback={switchOffCanvas}>
+                    <FaBars color={"black"} size={"1rem"}/>
+                </ButtonUI>
+                <NavbarB.Offcanvas show={show} placement="end">
+                    <Offcanvas.Header>
+                        <Offcanvas.Title className={"w-100 d-flex justify-content-between"}>
                             <NavLink className="text-decoration-none text-black" to={"/"}>Xelper</NavLink>
+                            <ButtonUI className={"border-0 d-flex align-content-center align-self-center"} variant={"link"} callback={switchOffCanvas}>
+                                <FaTimes color={"black"} size={"1rem"}/>
+                            </ButtonUI>
                         </Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
-                        <ContentNavbar auth={auth} setAuth={setAuth}/>
+                        <ContentNavbar switchOffCanvas={switchOffCanvas} auth={auth} exit={exit}/>
                     </Offcanvas.Body>
                 </NavbarB.Offcanvas>
             </Container>

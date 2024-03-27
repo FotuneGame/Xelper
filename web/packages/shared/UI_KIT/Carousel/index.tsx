@@ -10,14 +10,15 @@ interface IProps {
     imgs:Array<string>,
     video:Array<string>,
     poster:Array<string>,
+    controls:boolean,
 }
 
-const CarouselUI: React.FC<IProps> = ({imgs,video,poster}) => {
+const CarouselUI: React.FC<IProps> = ({imgs,video,poster,controls}) => {
     const [modalVisible,setModalVisible]=useState<boolean>(false);
 
     return (
         <Modal show={modalVisible} onHide={() => setModalVisible(!modalVisible)} type={"media"}>
-            <Carousel interval={null} className={modalVisible ? style.wrapper_full : style.wrapper}  indicators={false}>
+            <Carousel interval={null} className={modalVisible ? style.wrapper_full : style.wrapper}  indicators={false} controls={controls}>
                 {imgs
                     ? imgs.map((path,index) =>
                         <Carousel.Item key={path+index}>
