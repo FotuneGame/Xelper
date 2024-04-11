@@ -1,0 +1,34 @@
+.carousel{
+  width: 100%;
+}
+
+.body{
+  position: relative;
+  overflow: hidden;
+  .components {
+    display: flex;
+    text-align: center;
+  }
+}
+
+.btn_left{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: rgba(0,0,0,0);
+  border: none;
+}
+
+.btn_right{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background: rgba(0,0,0,0);
+  border: none;
+}
+
+.label{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}

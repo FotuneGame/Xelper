@@ -30,7 +30,7 @@ const Navbar = () => {
         <NavbarB collapseOnSelect expand={false} className={["bg-white shadow fixed-top z-3",style.navbar].join(" ")}>
             <Container className="mx-auto px-0">
                 <NavbarB.Brand >
-                    <NavLink className="text-decoration-none text-black" to={"/"}>Xelper</NavLink>
+                    <NavLink className="text-decoration-none text-black" to={"/"}>Тестовый навбар для перехода по страницам</NavLink>
                 </NavbarB.Brand>
                 <ButtonUI className={"border-0 d-flex align-content-center"} variant={"link"}  callback={switchOffCanvas}>
                     <FaBars color={"black"} size={"1rem"}/>

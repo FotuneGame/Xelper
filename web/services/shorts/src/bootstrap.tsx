@@ -1,7 +1,6 @@
 import { Suspense } from 'react';
 import {createRoot} from "react-dom/client";
 import { RouterProvider} from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {router} from "@/router/Router";
 import Loading from "@packages/shared/UI_KIT/Loading";
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./List.module.scss";
+import style from "./List.module.scss";
 import ListGroup from 'react-bootstrap/ListGroup';
 
 interface IProps {
@@ -8,9 +8,11 @@ interface IProps {
     className:string,
 }
 
-const ListUI : React.FC<IProps> = ({list,Numerate,className}) => {
+const ListUI : React.FC<IProps> = React.memo(({list,Numerate,className}) => {
+    console.log(list)
+    if(!list)return;
     return (
-        <ListGroup className={className}>
+        <ListGroup className={[style.list,className].join(" ")}>
             {
                 list.map((obj: string | React.ReactNode,index:number) => {
                     if(Numerate)
@@ -21,6 +23,6 @@ const ListUI : React.FC<IProps> = ({list,Numerate,className}) => {
             }
         </ListGroup>
     );
-};
+});
 
 export default ListUI;

@@ -4,4 +4,5 @@ export const userRoutes={
     authorization:"/authorization",
     forget:"/forget",
     code:"/code",
+    new_password:"/new_password",
 }

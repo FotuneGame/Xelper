@@ -1,0 +1,30 @@
+.money{
+  color: white;
+  min-height: 40px;
+  background: white;
+  border: 1px solid  var(--bs-border-color);
+  div{
+    background-color: #F5A934;
+  }
+}
+
+.people{
+  color: white;
+  min-height: 40px;
+  background: white;
+  border: 1px solid  var(--bs-border-color);
+  div{
+    background-color: #89A497;
+  }
+}
+
+
+.default{
+  color: white;
+  min-height: 40px;
+  background: white;
+  border: 1px solid  var(--bs-border-color);
+  div{
+    background-color: #3b3b3b;
+  }
+}

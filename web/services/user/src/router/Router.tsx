@@ -8,6 +8,7 @@ import {Registration} from "@/page/components/registration";
 import {Auth} from "@/page/components/auth";
 import {Forget} from "@/page/components/forget";
 import {Code} from "@/page/components/code";
+import {NewPassword} from "@/page/components/new_password";
 
 const routes = [
     {
@@ -33,6 +34,10 @@ const routes = [
             {
                 path: Routes.userRoutes.code,
                 element: <Code/>
+            },
+            {
+                path: Routes.userRoutes.new_password,
+                element: <NewPassword/>
             },
         ],
         errorElement:<ErrorCard/>

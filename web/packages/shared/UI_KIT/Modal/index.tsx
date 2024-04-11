@@ -7,14 +7,13 @@ interface ModalProps {
     onHide: () => void; // Явно указываем тип для onHide
     title: string;
     children: string | React.ReactNode; // Мы также можем принимать React-элементы в качестве содержимого
-    type: "media" | "not_media",
+    type: "preview" | "not_preview",
 }
 
-const ModalUI: React.FC<ModalProps> = ({ show, onHide, title, children ,type}) => {
-
-    if(type==="not_media"){
+const ModalUI: React.FC<ModalProps> = React.memo( ({ show, onHide, title, children ,type}) => {
+    if(type==="not_preview"){
         return (
-            <Modal show={show} onHide={onHide}>
+            <Modal className={style.modal} show={show} onHide={onHide}>
                 <Modal.Header closeButton>
                     <Modal.Title>{title}</Modal.Title>
                 </Modal.Header>
@@ -22,11 +21,10 @@ const ModalUI: React.FC<ModalProps> = ({ show, onHide, title, children ,type}) =
             </Modal>
         );
     }
-
-    if(type==="media") {
+    if(type==="preview") {
         if (show) {
             return (
-                <Modal show={show} onHide={onHide} fullscreen={true}>
+                <Modal className={style.modal}  show={show} onHide={onHide} fullscreen={true}>
                     <Modal.Body className={style.body}>{children}</Modal.Body>
                 </Modal>
             );
@@ -38,6 +36,6 @@ const ModalUI: React.FC<ModalProps> = ({ show, onHide, title, children ,type}) =
             );
         }
     }
-};
+});
 
 export default ModalUI;

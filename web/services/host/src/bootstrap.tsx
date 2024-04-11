@@ -4,7 +4,6 @@ import { RouterProvider} from "react-router-dom";
 import {router} from "@/router/Router";
 import ErrorCard from "@packages/shared/UI_KIT/ErrorCard";
 import Loading from "@packages/shared/UI_KIT/Loading";
-import 'bootstrap/dist/css/bootstrap.css';
 
 const root = document.getElementById('root')
 

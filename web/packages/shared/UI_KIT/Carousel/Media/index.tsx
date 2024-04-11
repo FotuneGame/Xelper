@@ -1,10 +1,9 @@
 import {React,useState} from 'react';
 import style from "./Carousel.module.scss";
-import {Carousel as Carousel} from "react-bootstrap"
-import Wrapper from "./wrapper/";
-import Modal from "../Modal";
-import Video from "../Video";
-import {FaTimes} from "react-icons/fa";
+import {Carousel} from "react-bootstrap"
+import Wrapper from "./wrapper";
+import Modal from "../../Modal";
+import Video from "../../Video";
 
 interface IProps {
     imgs:Array<string>,
@@ -13,11 +12,11 @@ interface IProps {
     controls:boolean,
 }
 
-const CarouselUI: React.FC<IProps> = ({imgs,video,poster,controls}) => {
+const CarouselMediaUI: React.FC<IProps> = ({imgs,video,poster,controls}) => {
     const [modalVisible,setModalVisible]=useState<boolean>(false);
 
     return (
-        <Modal show={modalVisible} onHide={() => setModalVisible(!modalVisible)} type={"media"}>
+        <Modal show={modalVisible} onHide={() => setModalVisible(!modalVisible)} type={"preview"}>
             <Carousel interval={null} className={modalVisible ? style.wrapper_full : style.wrapper}  indicators={false} controls={controls}>
                 {imgs
                     ? imgs.map((path,index) =>
@@ -54,4 +53,4 @@ const CarouselUI: React.FC<IProps> = ({imgs,video,poster,controls}) => {
     );
 };
 
-export default CarouselUI;
+export default CarouselMediaUI;

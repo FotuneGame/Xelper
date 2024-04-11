@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useCallback} from 'react';
 import style from "./Loading.module.scss";
 import Spinner from 'react-bootstrap/Spinner';
 
@@ -6,9 +6,9 @@ interface IProps{
     fullscreen:boolean,
 }
 
-const Loading: React.FC<IProps> = ({fullscreen}) => {
+const Loading: React.FC<IProps> = React.memo(({fullscreen}) => {
 
-    const Body = () => {
+    const Body = useCallback(() => {
         return(
             <div className={"d-flex align-items-center"}>
                 <Spinner className={"m-2"} animation="grow" variant="secondary" size="sm"/>
@@ -16,7 +16,7 @@ const Loading: React.FC<IProps> = ({fullscreen}) => {
                 <Spinner className={"m-2"} animation="grow" variant="secondary" size="sm"/>
             </div>
         );
-    }
+    },[]);
 
 
     if(fullscreen) {
@@ -32,6 +32,6 @@ const Loading: React.FC<IProps> = ({fullscreen}) => {
             </div>
         );
     }
-};
+});
 
 export default Loading;

@@ -3,9 +3,9 @@ import "./ErrorCard.module.scss";
 
 import ErrorSVG from "./images/error.svg";
 
-const ErrorCard = () => {
+const ErrorCard = React.memo(() => {
     return (
-        <div className="card container">
+        <div className="container">
             <div className="d-lg-flex justify-content-center align-items-center p-4">
                 <div className="card-body col-12 col-lg-9">
                     <h1 className="card-title">Упс! Что-то пошло не так...</h1>
@@ -17,6 +17,6 @@ const ErrorCard = () => {
             </div>
         </div>
     );
-};
+});
 
 export default ErrorCard;

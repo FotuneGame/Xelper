@@ -1,0 +1,1 @@
+export {NewPasswordLazy as NewPassword} from './NewPassword.lazy';

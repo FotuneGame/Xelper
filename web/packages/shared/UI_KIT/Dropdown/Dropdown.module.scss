@@ -1,0 +1,36 @@
+.default{
+  display: block;
+  color: white;
+  min-width: 10%;
+  background: #89A497;
+  --bs-btn-active-bg: #677a71;
+  --bs-btn-active-border-color: #677a71;
+  --bs-btn-hover-bg: #7f968b;
+  --bs-btn-hover-border-color: #7f968b;
+}
+
+.list{
+  border-radius: var(--bs-border-radius);
+  position: absolute;
+  min-width: 10%;
+  z-index: 2;
+  max-height: 100px;
+  border: 1px solid var(--bs-border-color);
+  background: #89A497;
+  overflow-x:hidden;
+  overflow-y:scroll;
+}
+.list::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* scrollbar track */
+.list::-webkit-scrollbar-track {
+  background: #89A497;
+}
+
+/* scrollbar handle */
+.list::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #677a71;
+}

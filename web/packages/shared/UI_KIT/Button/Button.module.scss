@@ -1,0 +1,50 @@
+.button{
+  padding: 0.5rem;
+  border-style: none;
+  border-radius: 10px;
+  margin: 0.25rem;
+}
+
+
+
+.agree{
+  color: white;
+  background: #89A497;
+  --bs-btn-active-bg: #677a71;
+  --bs-btn-active-border-color: var(--bs-border-color);
+  --bs-btn-hover-bg: #7f968b;
+  --bs-btn-hover-border-color: var(--bs-border-color);
+}
+
+
+
+.danger{
+  color: white;
+  background: #A54A40;
+  --bs-btn-active-bg: #7a362e;
+  --bs-btn-active-border-color: var(--bs-border-color);
+  --bs-btn-hover-bg: #883c33;
+  --bs-btn-hover-border-color: var(--bs-border-color);
+}
+
+
+
+.neutral{
+  color: white;
+  background: #3D3D3D;
+  --bs-btn-active-bg: #151515;
+  --bs-btn-active-border-color: var(--bs-border-color);
+  --bs-btn-hover-bg: #343434;
+  --bs-btn-hover-border-color: var(--bs-border-color);
+}
+
+
+
+.none{
+  color: #2d2d2d;
+  background: rgba(0,0,0,0);
+  --bs-btn-active-bg:  rgba(0,0,0,0);
+  --bs-btn-active-border-color:  rgba(0,0,0,0);
+  --bs-btn-hover-bg: rgba(0,0,0,0);
+  --bs-btn-hover-border-color:  rgba(0,0,0,0);
+}

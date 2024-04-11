@@ -1,0 +1,14 @@
+.item{
+  color:white;
+  background: #89A497;
+  padding: 0.25rem;
+  text-align: center;
+  border-bottom-color: #3b3b3b;
+  list-style: none;
+  border: 1px solid var(--bs-border-color);
+}
+
+.active{
+  color:white;
+  background: #677a71;
+}
