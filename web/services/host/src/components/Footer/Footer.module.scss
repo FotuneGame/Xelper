@@ -8,6 +8,9 @@ footer{
 .up_back{
   background: #3b3b3b;
   height: 60%;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .down_back{
@@ -30,7 +33,7 @@ footer{
 
 @media only screen and  (max-width: 767px){
   footer{
-    height: 400px;
+    height: 80px;
   }
   .up_back{
     height: 75%;
@@ -38,4 +41,31 @@ footer{
   .down_back{
     height: 25%;
   }
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+}
+
+.button-link {
+    margin-right: 76px;
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    margin-right: 56px;
+}
+
+.emailLink {
+    color: white;
+    text-decoration: none; /* Убираем подчеркивание */
 }

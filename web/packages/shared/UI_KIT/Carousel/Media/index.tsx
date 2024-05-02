@@ -35,13 +35,13 @@ const CarouselMediaUI: React.FC<IProps> = ({imgs,video,poster,controls}) => {
                         <Carousel.Item key={path+index}>
                             <div className={"d-flex justify-content-center"}>
                                     {modalVisible ?
-                                        <div className={"w-50 align-self-center"}>
+                                        <div className={"w-50 align-self-end"}>
                                             <Wrapper setModalVisible={setModalVisible} AllControls={false}>
                                                 <Video className={style.item_full} video={path} poster={index < poster.length ? poster[index] : undefined} />
                                             </Wrapper>
                                         </div>
                                         :
-                                        <div className={"w-75 align-self-center"}>
+                                        <div className={"w-75 align-self-end"}>
                                             <Video className={style.item} video={path} poster={index < poster.length ? poster[index] : undefined} />
                                         </div>
                                     }

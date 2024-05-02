@@ -1,0 +1,218 @@
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.eventPhotos {
+    margin-bottom: 20px;
+}
+
+.eventImageLarge {
+    display: flex;
+    justify-content: flex-end;
+    width: 250px;
+    float: right; /* Размещает изображение справа */
+    height: auto;
+    margin-left: 20px;
+}
+
+.eventImageSmall {
+    width: 200px;
+    height: auto;
+    margin-left: 20px;
+    float: right; /* Размещает изображение справа */
+    margin-bottom: 15px;
+    transform: translate(-200%, 20%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.eventCards {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+}
+
+.eventCard {
+    width: 45%;
+    position: relative;
+}
+
+.eventCard img {
+    opacity: 0.75;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.eventPhotos {
+    margin-bottom: 20px;
+}
+
+.eventImageLarge {
+    display: flex;
+    justify-content: flex-end;
+    width: 250px;
+    float: right; /* Размещает изображение справа */
+    height: auto;
+    margin-left: 20px;
+}
+
+.eventImageSmall {
+    width: 200px;
+    height: auto;
+    margin-left: 20px;
+    float: right; /* Размещает изображение справа */
+    margin-bottom: 15px;
+    transform: translate(-200%, 20%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.eventCards {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+}
+
+.eventCard {
+    width: 45%;
+    position: relative;
+}
+
+.eventCard img {
+    opacity: 0.75;
+    width: 100%;
+    height: 100%;
+}
+
+.card-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 5px;
+}
+
+p {
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    font-size: 28px; /* Установка размера текста */
+    font-family: 'Lato', sans-serif; /* Установка шрифта */
+    width: 50%; /* Определите ширину текста здесь */
+    margin-left: 60px; /* Добавление отступа справа */
+}
+
+
+
+.container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.contentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text {
+    flex: 1;
+}
+
+.images img {
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+select, textarea {
+    margin-top: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+a img {
+    max-width: 100%;
+}
+
+.inputContainer {
+    margin-top: 20px;
+}
+
+.inputLabel {
+    margin-right: 10px;
+}
+
+.fileInputValueContainer {
+    margin-top: 10px;
+}
+
+.boostyImage {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.addImageContainer, .addVideoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+}
+
+.addImageText, .addVideoText {
+    margin-top: 5px;
+}
+
+.fileInputValueContainer, .videoInputValueContainer {
+    margin-top: 10px;
+}
