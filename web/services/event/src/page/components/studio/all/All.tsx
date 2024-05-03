@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 // Для примера
 import { ExempleUtils } from "@packages/shared/utils/ExempleUtils";
 // Пример загрузки статики
-import foto1JPG from "C:/Xelper/web/services/event/src/assets/11.jpg";
-import foto2JPG from "C:/Xelper/web/services/event/src/assets/22.jpg";
+import foto1JPG from "../../../../assets/11.jpg";
+import foto2JPG from "../../../../assets/22.jpg";
 
 const All = () => {
     ExempleUtils();

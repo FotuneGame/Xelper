@@ -3,9 +3,10 @@ import {NavLink} from "react-router-dom";
 import {Routes} from "@packages/shared/routes";
 import style from "./ContentNavbar.module.scss";
 import ButtonUI from "@packages/shared/UI_KIT/Button";
-import {React} from "react";
+import {React, useEffect} from "react";
 
 import Ava from "../../../assets/1.jpg";
+import userAPI from "@packages/shared/API/UserAPI";
 
 interface IProps{
     auth:boolean,
@@ -15,10 +16,18 @@ interface IProps{
 
 const ContentNavbar: React.FC<IProps> = ({auth,exit,switchOffCanvas}) =>{
     if(auth){
+        const data = async () =>{
+            return await userAPI.data(localStorage.getItem("auth") ?? sessionStorage.getItem("auth"));
+        }
+        useEffect(()=>{
+            data().then((res)=>{
+                console.log(res);
+            }).catch((err)=>console.log(err))
+        },[auth])
         return (
             <div className="w-100 h-100 d-grid justify-content-center">
                 <Nav variant="underline" className="align-self-start">
-                    <div className="my-2 d-grid d-lg-flex justify-content-center">
+                    <div className="my-2 d-flex justify-content-center">
                         <NavLink onClick={switchOffCanvas} className="mx-auto mx-lg-1 my-lg-auto my-2 text-decoration-none text-black" to={Routes.userRoutes.account+"/"+1}>
                             <strong className={"mx-auto mx-lg-2 my-lg-auto my-2 text-decoration-none text-black"}>Логин</strong>
                         </NavLink>
@@ -39,8 +48,8 @@ const ContentNavbar: React.FC<IProps> = ({auth,exit,switchOffCanvas}) =>{
                         <NavLink onClick={switchOffCanvas} className="nav-link mx-auto mx-lg-2 my-lg-auto my-2 text-center" to={Routes.aboutRoutes.main}>О нас</NavLink>
                     </Nav.Item>
                 </Nav>
-                <div className="my-2 d-grid d-lg-flex justify-content-center align-self-end">
-                    <ButtonUI className={"mx-auto mx-lg-2 my-lg-auto my-2"} variant={"danger"} callback={exit}>
+                <div className="my-2 d-flex justify-content-center align-self-end">
+                    <ButtonUI className={"mx-auto mx-lg-2 my-lg-auto my-2"} type={"danger"} callback={exit}>
                         <NavLink className="text-white text-decoration-none" to={Routes.eventRoutes.main}>Выход</NavLink>
                     </ButtonUI>
                 </div>
@@ -62,7 +71,7 @@ const ContentNavbar: React.FC<IProps> = ({auth,exit,switchOffCanvas}) =>{
                     </Nav.Item>
                 </Nav>
                 <div className="my-2 d-flex justify-content-center align-self-end">
-                    <ButtonUI className={"my-lg-auto my-2"} variant={"primary"} callback={switchOffCanvas}>
+                    <ButtonUI className={"my-lg-auto my-2"} type={"agree"} callback={switchOffCanvas}>
                         <NavLink className="text-white text-decoration-none" to={Routes.userRoutes.authorization}>Войти</NavLink>
                     </ButtonUI>
                 </div>

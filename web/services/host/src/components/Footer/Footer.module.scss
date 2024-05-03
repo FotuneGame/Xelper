@@ -33,7 +33,7 @@ footer{
 
 @media only screen and  (max-width: 767px){
   footer{
-    height: 80px;
+    height: 200px;
   }
   .up_back{
     height: 75%;
@@ -48,24 +48,14 @@ footer{
     align-items: center;
 }
 
-.button-link {
-    margin-right: 76px;
-    text-decoration: none; /* Убираем подчеркивание у ссылок */
+.buttonLink {
+    padding: 1rem;
+    text-decoration: none; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
 }
 
-.button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background: transparent;
-    background-color: white;
-    cursor: pointer;
-    overflow: hidden;
-    margin-right: 56px;
-}
 
 .emailLink {
     color: white;
-    text-decoration: none; /* Убираем подчеркивание */
+    text-align: center;
+    text-decoration: none; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 }

@@ -7,33 +7,27 @@ import {FaInstagram,FaYoutube,FaTelegram,FaVk,FaGithub} from "react-icons/fa"
 const Footer = () => {
     return (
         <footer className="z-2">
-            <div className={["w-100 m-0 d-flex justify-content-center align-content-center", style.up_back].join(" ")}>
-                <Link to="https://www.instagram.com" className={styles.buttonLink}>
-                    <button className={styles.button}>
-                        <FaInstagram style={{ fontSize: "25px" }} />
-                    </button>
-                </Link>
-                <Link to="https://www.youtube.com" className={styles.buttonLink}>
-                    <button className={styles.button}>
-                        <FaYoutube style={{ fontSize: "25px" }} />
-                    </button>
-                </Link>
-                <Link to="https://t.me/telegram" className={styles.buttonLink}>
-                    <button className={styles.button}>
-                        <FaTelegram style={{ fontSize: "25px" }} />
-                    </button>
-                </Link>
-                <Link to="https://vk.ru" className={styles.buttonLink}>
-                    <button className={styles.button}>
-                        <FaVk style={{ fontSize: "25px" }} />
-                    </button>
-                </Link>
-                <Link to="https://github.com" className={styles.buttonLink}>
-                    <button className={styles.button}>
-                        <FaGithub style={{ fontSize: "25px" }} />
-                    </button>
-                </Link>
-                <a href="mailto:example@gmail.com" className={styles.emailLink}>Обратная связь: example@gmail.com</a>
+            <div className={["w-100 m-0 d-grid d-md-flex row justify-content-center  align-content-center", style.up_back].join(" ")}>
+                <div className={"col-12 col-md-5 d-flex justify-content-center py-3"}>
+                    <Link to="https://www.instagram.com" className={styles.buttonLink}>
+                            <FaInstagram  color={"white"} size={"1.5rem"}/>
+                    </Link>
+                    <Link to="https://www.youtube.com" className={styles.buttonLink}>
+                            <FaYoutube color={"white"} size={"1.5rem"} />
+                    </Link>
+                    <Link to="https://t.me/telegram" className={styles.buttonLink}>
+                            <FaTelegram color={"white"} size={"1.5rem"} />
+                    </Link>
+                    <Link to="https://vk.ru" className={styles.buttonLink}>
+                            <FaVk color={"white"} size={"1.5rem"} />
+                    </Link>
+                    <Link to="https://github.com" className={styles.buttonLink}>
+                            <FaGithub color={"white"} size={"1.5rem"} />
+                    </Link>
+                </div>
+                <div className={"col-12 col-md-5 d-flex justify-content-center py-3"}>
+                    <a href="mailto:example@gmail.com" className={styles.emailLink}>Обратная связь: example@gmail.com</a>
+                </div>
             </div>
             <div className={["w-100 d-flex justify-content-center",style.down_back].join(" ")}>
                 <div className="h-100 d-flex">

@@ -1,0 +1,39 @@
+.place_1{
+  width: 200px;
+}
+
+.place_2{
+  width: 200px;
+}
+
+.place_3{
+  width: 200px;
+}
+
+.place_4{
+  width: 200px;
+}
+
+.text_zone{
+  color: black;
+}
+
+.back_img{
+  background: rgba(0,0,0,0);
+}
+
+@media only screen and (max-width: 767px) {
+  .back_img{
+    z-index: -1;
+    opacity: 0.6;
+  }
+  .text_zone{
+    z-index: 0;
+    color: white;
+    text-align: center;
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    top: 0%;
+    height: 100%;
+  }
+}
