@@ -47,12 +47,12 @@ const RegistrationForm = () => {
             <Container className={"w-100 shadow rounded p-3 mb-3"}>
                 <Row>
                     {error && <AlertUI type={"danger"} label={"Не удалось зарегистрироваться"}/>}
-                    <InputUI callback={changeSurname} label={"Text"} placeholder={"Имя"} type={"text"} value={state.surname}/>
-                    <InputUI callback={changePassword} label={"Password"} placeholder={"Пароль"} type={"password"} value={state.password}/>
-                    <InputUI callback={changePasswordAgain} label={"Password"} placeholder={"Повторите пароль"} type={"password"} value={passwordAgain}/>
-                    <InputUI callback={changeEmail} label={"Email"} placeholder={"exemple@email.com"} type={"email"} value={state.email}/>
-                    <InputUI callback={changePhone} label={"Phone"} placeholder={"+7 (953) 349-61-09"} type={"phone"} value={state.phone}/>
-                    <InputUI callback={changePlace} label={"Text"} placeholder={"Место проживания"} type={"text"} value={state.place}/>
+                    <InputUI callback={changeSurname} label={"Имя"} placeholder={"Имя"} type={"text"} value={state.surname}/>
+                    <InputUI callback={changePassword} label={"Пароль"} placeholder={"Пароль"} type={"password"} value={state.password}/>
+                    <InputUI callback={changePasswordAgain} label={"Повторный пароль"} placeholder={"Повторите пароль"} type={"password"} value={passwordAgain}/>
+                    <InputUI callback={changeEmail} label={"Почта"} placeholder={"exemple@email.com"} type={"email"} value={state.email}/>
+                    <InputUI callback={changePhone} label={"Телефон"} placeholder={"+7 (953) 349-61-09"} type={"phone"} value={state.phone}/>
+                    <InputUI callback={changePlace} label={"Адресс"} placeholder={"Место проживания"} type={"text"} value={state.place}/>
                 </Row>
                 <div className={"d-grid justify-content-center d-md-flex justify-content-md-between mt-3"}>
                     <div className={"d-grid justify-content-center d-md-flex"}>
