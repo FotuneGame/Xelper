@@ -15,7 +15,7 @@ const userAPI = {
             PhoneNumber: phone ?? ")dsa"
         }).then(res => {
             console.log(res);
-            return res;
+            return res.json();
         }).catch(e =>{
             console.log(e.name + ") Запрос на регистрацию пользователя: " + e.message);
             return null;
@@ -34,7 +34,7 @@ const userAPI = {
             PhoneNumber: ")dsa"
         }).then(res => {
             console.log(res);
-            return res;
+            return res.json();
         }).catch(e =>{
             console.log(e.name + ") Запрос на авторизацию пользователя: " + e.message)
             return null;
@@ -48,7 +48,7 @@ const userAPI = {
             }
         }).then(res => {
             console.log(res);
-            return res;
+            return res.json();
         }).catch(e =>{
             console.log(e.name + ") Запрос на получение инфы по токену пользователя: " + e.message)
             return null;

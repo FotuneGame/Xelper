@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 import {Routes} from "@packages/shared/routes";
 import style from "./ContentNavbar.module.scss";
 import ButtonUI from "@packages/shared/UI_KIT/Button";
-import {React, useEffect} from "react";
+import {React, useEffect, useState} from "react";
 
 import Ava from "../../../assets/1.jpg";
 import userAPI from "@packages/shared/API/UserAPI";
@@ -16,12 +16,16 @@ interface IProps{
 
 const ContentNavbar: React.FC<IProps> = ({auth,exit,switchOffCanvas}) =>{
     if(auth){
+        const [state,setState]=useState({
+            username:"",
+        });
         const data = async () =>{
             return await userAPI.data(localStorage.getItem("auth") ?? sessionStorage.getItem("auth"));
         }
         useEffect(()=>{
             data().then((res)=>{
                 console.log(res);
+                setState({...setState,username: res.data.username})
             }).catch((err)=>console.log(err))
         },[auth])
         return (
