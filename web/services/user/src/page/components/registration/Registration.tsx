@@ -8,7 +8,8 @@ import {NavLink, useNavigate} from "react-router-dom";
 import {Routes} from "@packages/shared/routes";
 import {Container,Row} from "react-bootstrap";
 
-
+import Img1 from "../../../assets/1.jpg";
+import Img2 from "../../../assets/2.png";
 
 
 const RegistrationForm = () => {
@@ -43,7 +44,7 @@ const RegistrationForm = () => {
 
     return (
         <div>
-            <Promo label={"Регистрация"} text={"Заполним информацию для регистрации аккаунта"}/>
+            <Promo label={"Регистрация"} text={"Заполним информацию для регистрации аккаунта"} img={[Img1,Img2]} type={1}/>
             <Container className={"w-100 shadow rounded p-3 mb-3"}>
                 <Row>
                     {error && <AlertUI type={"danger"} label={"Не удалось зарегистрироваться"}/>}

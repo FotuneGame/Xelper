@@ -8,6 +8,9 @@ import {Routes} from "@packages/shared/routes";
 import ButtonUI from "@packages/shared/UI_KIT/Button";
 import UserAPI from "@packages/shared/API/UserAPI";
 
+import Img1 from "../../../assets/1.jpg";
+import Img2 from "../../../assets/2.png";
+
 interface IProps{
     timeWait:number
 }
@@ -51,7 +54,7 @@ const Code: React.FC<IProps> = ({timeWait=30}) => {
 
     return (
         <div>
-            <Promo label={"Код подтверждения"} text={"Кажется к вам пришло письмо на почту..."}/>
+            <Promo label={"Код подтверждения"} text={"Кажется к вам пришло письмо на почту..."} img={[Img1,Img2]} type={1}/>
             <Container className={"w-100 shadow rounded p-3 mb-3"}>
                 <Row className={"w-100 shadow rounded p-3 mb-3"}>
                     {error && <AlertUI type={"danger"} label={"Не удалось отправить ссылку снова..."}/>}

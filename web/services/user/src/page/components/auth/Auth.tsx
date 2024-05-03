@@ -9,6 +9,10 @@ import InputUI from "@packages/shared/UI_KIT/Input";
 import ButtonUI from "@packages/shared/UI_KIT/Button";
 import Promo from "../../../components/Promo";
 
+import Img1 from "../../../assets/1.jpg";
+import Img2 from "../../../assets/2.png";
+
+
 interface IProps{
 
 }
@@ -40,7 +44,7 @@ const Auth: React.FC<IProps> = ({}) => {
 
     return (
         <div>
-            <Promo label={"Вход в аккаунт"} text={"Заполним информацию для входа в аккаунт"}/>
+            <Promo label={"Вход в аккаунт"} text={"Заполним информацию для входа в аккаунт"} img={[Img1,Img2]}/>
             <Container className={"w-100 shadow rounded p-3 mb-3"}>
                 <Row>
                     {error && <AlertUI type={"danger"} label={"Не удалось зарегистрироваться"}/>}

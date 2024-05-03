@@ -51,12 +51,10 @@ const Navbar = () => {
                     <FaBars color={"black"} size={"1rem"} />
                 </ButtonUI>
                 <Offcanvas show={show} onHide={switchOffCanvas} placement="top"  className={"z-2 h-100"} backdropClassName={"z-n1"}>
-                    <Offcanvas.Title className={"w-100 d-flex d-block d-md-none justify-content-end"}>
+                    <Offcanvas.Body className={style.drop_down}>
                         <ButtonUI className={"border-0 d-flex align-content-center align-self-center"} variant={"link"} callback={switchOffCanvas}>
                             <FaTimes color={"black"} size={"1rem"} />
                         </ButtonUI>
-                    </Offcanvas.Title>
-                    <Offcanvas.Body className={style.drop_down}>
                         <div className={"mx-auto w-75 h-10 d-block d-md-none"}>
                             <Search placeholder={"Введите запрос"} event={search} searchSetting={searchSetting} setSearchSetting={setSearchSetting} methodHelp={methodSearchHelp} />
                         </div>
@@ -65,12 +63,10 @@ const Navbar = () => {
                 </Offcanvas>
 
                 <Offcanvas show={searchSetting} onHide={searchSettingOffCanvas} placement="top" className={"z-2 h-100"} backdropClassName={"z-n1"}>
-                    <Offcanvas.Title className={"w-100 d-flex d-block d-md-none justify-content-end"}>
+                    <Offcanvas.Body className={style.drop_down}>
                         <ButtonUI className={"border-0 d-flex align-content-center align-self-center"} variant={"link"} callback={searchSettingOffCanvas}>
                             <FaTimes color={"black"} size={"1rem"} />
                         </ButtonUI>
-                    </Offcanvas.Title>
-                    <Offcanvas.Body className={style.drop_down}>
                         <SearchNavbar auth={auth} exit={exit} switchOffCanvas={searchSettingOffCanvas}/>
                     </Offcanvas.Body>
                 </Offcanvas>
